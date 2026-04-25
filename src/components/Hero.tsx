@@ -34,7 +34,7 @@ const Hero = () => {
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
-  }, [text, isDeleting, loopNum, typingSpeed]);
+  }, [isDeleting, loopNum, roles, text, typingSpeed]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
