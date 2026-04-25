@@ -9,19 +9,23 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  const roles = [
+  const roles = React.useMemo(() => [
     'Frontend Architect',
     'React Specialist',
     'UI/UX Magician',
     'Code Craftsman'
-  ];
-
+  ], []);
   useEffect(() => {
     const handleTyping = () => {
       const i = loopNum % roles.length;
       const fullText = roles[i];
 
-      setText(isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1));
+      setText(
+        isDeleting
+          ? fullText.substring(0, text.length - 1)
+          : fullText.substring(0, text.length + 1)
+      );
+
       setTypingSpeed(isDeleting ? 30 : 150);
 
       if (!isDeleting && text === fullText) {
@@ -34,8 +38,7 @@ const Hero = () => {
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
-  }, [isDeleting, loopNum, roles, text, typingSpeed]);
-
+  }, [text, isDeleting, loopNum, typingSpeed, roles]);
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -49,7 +52,7 @@ const Hero = () => {
       {/* Dynamic background with mouse-follow effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-obsidian via-midnight to-charcoal">
         <div className="absolute inset-0 bg-gradient-luxury bg-[300%] animate-gradient-slow opacity-20"></div>
-        
+
         {/* Mouse-following gradient orb */}
         <motion.div
           animate={{
@@ -120,7 +123,7 @@ const Hero = () => {
             >
               <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold leading-tight">
                 <span className="block text-silver mb-2">CREATIVE</span>
-                <motion.span 
+                <motion.span
                   className="block bg-gradient-to-r from-gold via-rose-gold to-copper bg-clip-text text-transparent relative"
                   whileHover={{ scale: 1.05 }}
                 >
@@ -133,7 +136,7 @@ const Hero = () => {
                   />
                 </motion.span>
               </h1>
-              
+
               {/* Animated underline */}
               <motion.div
                 initial={{ width: 0 }}
@@ -162,15 +165,15 @@ const Hero = () => {
                     <Terminal className="w-5 h-5 text-white" />
                   </motion.div>
                   <div className="text-2xl font-mono text-gold">
-                  {text}
-                  <motion.span
-                    animate={{ opacity: [1, 0, 1] }}
-                    transition={{ duration: 1, repeat: Infinity }}
-                    className="animate-pulse"
-                  >|</motion.span>
+                    {text}
+                    <motion.span
+                      animate={{ opacity: [1, 0, 1] }}
+                      transition={{ duration: 1, repeat: Infinity }}
+                      className="animate-pulse"
+                    >|</motion.span>
+                  </div>
                 </div>
-                </div>
-               
+
               </div>
             </motion.div>
 
@@ -187,8 +190,8 @@ const Hero = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.6 + index * 0.1 }}
-                  whileHover={{ 
-                    scale: 1.05, 
+                  whileHover={{
+                    scale: 1.05,
                     y: -5,
                     boxShadow: `0 10px 30px rgba(${item.color === 'gold' ? '255, 215, 0' : item.color === 'rose-gold' ? '255, 179, 71' : item.color === 'copper' ? '184, 115, 51' : '205, 127, 50'}, 0.4)`
                   }}
@@ -206,7 +209,7 @@ const Hero = () => {
               ))}
             </div>
 
-          
+
           </motion.div>
 
           {/* Right 3D Profile Card */}
@@ -226,7 +229,7 @@ const Hero = () => {
                 transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-0 bg-gradient-to-r from-gold via-rose-gold to-copper rounded-3xl opacity-30 blur-xl"
               />
-              
+
               <div className="relative bg-charcoal/90 backdrop-blur-glass rounded-3xl border border-gold/30 p-8 shadow-luxury-gold">
                 {/* Profile Image with 3D effect */}
                 <motion.div
@@ -241,14 +244,14 @@ const Hero = () => {
                       className="absolute inset-0 bg-gradient-to-r from-gold via-rose-gold to-copper rounded-full p-1"
                     >
                       <div className="w-full h-full bg-obsidian rounded-full overflow-hidden flex items-center justify-center">
-                        <img 
-                          src="/sintupic.png" 
+                        <img
+                          src="/sintupic.png"
                           alt="Sintu Kumar"
                           className="w-full h-full object-cover rounded-full"
                         />
                       </div>
                     </motion.div>
-                    
+
                     {/* Floating particles */}
                     {[...Array(6)].map((_, i) => (
                       <motion.div
@@ -311,8 +314,8 @@ const Hero = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ 
-                        scale: 1.2, 
+                      whileHover={{
+                        scale: 1.2,
                         rotate: [0, 360],
                         boxShadow: "0 0 20px rgba(20, 184, 166, 0.5)"
                       }}
