@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, ArrowDown, Sparkles, Code2, Zap, ExternalLink, Globe, Terminal, Palette, MessageSquare, Briefcase, Users } from 'lucide-react';
+import { ArrowDown, Code2, Zap, Globe, Terminal, Palette, MessageSquare, Briefcase, Users } from 'lucide-react';
 
 const Hero = () => {
   const [text, setText] = useState('');

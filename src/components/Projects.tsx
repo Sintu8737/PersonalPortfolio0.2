@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Calendar, Briefcase, Star, ArrowRight, Code, Rocket, Users, Eye, GitBranch, Zap, Layers, Box } from 'lucide-react';
+import {  Calendar, ArrowRight,  Rocket, Eye, GitBranch, Zap, Layers, Box } from 'lucide-react';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);

@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
-import { User, Award, Briefcase, Code, Zap } from 'lucide-react';
+import { Award, Briefcase, Code } from 'lucide-react';
 
 const About = () => {
   const journey = [

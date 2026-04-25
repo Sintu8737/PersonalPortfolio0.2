@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, ExternalLink, MessageSquare, Sparkles, Rocket, User, Code, Briefcase } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageSquare, User } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
