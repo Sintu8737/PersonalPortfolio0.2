@@ -20,7 +20,7 @@ const Projects = () => {
       technologies: ['React Query', 'Redux Toolkit', 'TypeScript', 'Chakra UI', 'useForm','React Hook Form','Zustand','CI/CD'],
       highlights: ['40% Faster Processing', '99.9% Uptime', '50K+ Daily Users'],
       liveUrl: 'https://wwww.qualtechedge.ai',
-      githubUrl: 'https://github.com/sintukumar/mifin',
+      githubUrl: 'https://github.com/Sintu8737',
       category: 'Enterprise',
       difficulty: 'Advanced',
       impact: 'High'
@@ -39,7 +39,7 @@ const Projects = () => {
       technologies: ['React.js', 'JavaScript', 'Axios','Material UI','OpenAI','AR','Github','CI/CD','Firebase'],
       highlights: ['200K+ Students', '95% Satisfaction', 'AR/VR Ready'],
       liveUrl: 'https://www.edorbit.com',
-      githubUrl: 'https://github.com/sintukumar/edorbit',
+      githubUrl: 'https://github.com/Sintu8737',
       category: 'Innovation',
       difficulty: 'Expert',
       impact: 'Very High'

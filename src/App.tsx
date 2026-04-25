@@ -102,7 +102,7 @@ function App() {
             </p>
             <div className="mt-4 flex justify-center space-x-6">
               <a 
-                href="https://github.com/sintukumar" 
+                href="https://github.com/Sintu8737" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-silver hover:text-gold transition-colors duration-300"
@@ -110,7 +110,7 @@ function App() {
                 GitHub
               </a>
               <a 
-                href="https://linkedin.com/in/sintukumar" 
+                href="https://www.linkedin.com/in/sintu-kumar8737/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-purple-light transition-colors duration-300"

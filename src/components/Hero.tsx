@@ -304,10 +304,10 @@ const Hero = () => {
                 {/* Social Links 3D */}
                 <div className="flex justify-center space-x-4">
                   {[
-                    { icon: Code2, href: "https://github.com" },
-                    { icon: Briefcase, href: "https://linkedin.com" },
-                    { icon: MessageSquare, href: "https://twitter.com" },
-                    { icon: Users, href: "https://instagram.com" }
+                    { icon: Code2, href: "https://github.com/Sintu8737" },
+                    { icon: Briefcase, href: "https://www.linkedin.com/in/sintu-kumar8737/" },
+                    { icon: MessageSquare, href: "https://www.linkedin.com/in/sintu-kumar8737/" },
+                    { icon: Users, href: "https://www.instagram.com/sintuj_kumar" }
                   ].map((social, index) => (
                     <motion.a
                       key={index}
